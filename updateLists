@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+
+./extractFromSpreadsheets.pl > SeismicityDiary-brief.txt
+grep -i Rockfall SeismicityDiary-brief.txt > SeismicityDiary-rockfall.txt
+grep -i Irish SeismicityDiary-brief.txt > SeismicityDiary-irish.txt
+grep -i Lahar SeismicityDiary-brief.txt > SeismicityDiary-lahar.txt
+grep -i Distal SeismicityDiary-brief.txt > SeismicityDiary-distal.txt
+grep -i Distal SeismicityDiary-brief.txt | grep Fergus > SeismicityDiary-distal_Fergus.txt
+grep -i Noise SeismicityDiary-brief.txt > SeismicityDiary-noise.txt
+grep -i Explosion SeismicityDiary-brief.txt > SeismicityDiary-explosion.txt
+grep -i String SeismicityDiary-brief.txt > SeismicityDiary-string.txt
+grep VT SeismicityDiary-brief.txt > SeismicityDiary-vt.txt
+grep -i Swarmette SeismicityDiary-brief.txt > SeismicityDiary-swarmette.txt
