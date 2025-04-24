@@ -14,6 +14,8 @@ Scripts to produce information from *SeismicityDiary.xlsx*.
 * Runs once an hour as a cronjob on *opsproc3*.
 
 ## cron
+
+*rsync* is used to synchronise all the plot files referenced by *SeismicityDiary.html* on *opsproc3* with *notWebobs*.
 ```
 # Seismicity diary
 15 * * * * cd /home/seisan/projects/SeismicityDiary; ./updateLists >/dev/null 2>&1; scp SeismicityDiary-*.txt webobs@webobs:/var/www/html/SeismicityDiary/
