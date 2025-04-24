@@ -1,4 +1,5 @@
-.~lock.SeismicityDiary.xlsx#
+*.~lock*
+*.tmp
 0-toAdd.txt
 doIt.sh
 notes/
