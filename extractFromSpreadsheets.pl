@@ -313,7 +313,8 @@ foreach my $idd (sort keys %whats) {
             print HFH "</TD></TR>\n";
         }
 
-        opendir(DIR, "./plots");
+        my $year = substr( $idd, 0, 4 );
+        opendir(DIR, join( '/', "./plots", $year ) );
         opendir(DIR1, "/home/seisan/projects/Seismicity/VT_strings/data/heli_plots");
         opendir(DIR2, "/home/seisan/projects/Seismicity/VT_strings/data/all_plots");
         my $sst = $ids{$idd};
@@ -327,7 +328,7 @@ foreach my $idd (sort keys %whats) {
             print HFH "<TR><TD colspan=\"5\">\n";
             print HFH "  Plots: ";
             foreach my $plotFile (@plotfiles,@plotfiles1,@plotfiles2) {
-                my $link = "<BR><A HREF=\"" . join( '/', $pathPlots, $plotFile ) . "\">" . $plotFile . "</A> ";
+                my $link = "<BR><A HREF=\"" . join( '/', $pathPlots, $year, $plotFile ) . "\">" . $plotFile . "</A> ";
                 print HFH $link;
             }
             print HFH "</TD></TR>\n";
