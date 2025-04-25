@@ -1,16 +1,16 @@
 # SeismicityDiary
 
-Scripts to produce information from *SeismicityDiary.xlsx*.
+Scripts to extract information from *SeismicityDiary.xlsx* into text files and an html file for access in *notWebobs*. The last includes links to all the plots for each event or string.
 
 ## extractFromSpreadsheets.pl
 
 * Extracts key information from the spreadsheet *SeismicityDiary.xlsx* to text files.
-* Creates html file for *notWebobs*.
+* Creates html file for *notWebobs*: http://webobs.mvo.ms:8080/SeismicityDiary.html.
 * Creates *doIt.sh* which should **never** be run in its entirity.
 
 ## updateLists
 
-* Runs extractFromSpreadsheets.pl then uses grep to create text files.
+* Runs *extractFromSpreadsheets.pl* then uses *grep* to create text files.
 * Runs once an hour as a cronjob on *opsproc3*.
 
 ## cron
