@@ -327,8 +327,12 @@ foreach my $idd (sort keys %whats) {
             print FH join( "  ", ( @plotfiles, @plotfiles1, @plotfiles2 ) );
             print HFH "<TR><TD colspan=\"5\">\n";
             print HFH "  Plots: ";
-            foreach my $plotFile (@plotfiles,@plotfiles1,@plotfiles2) {
-                my $link = "<BR><A HREF=\"" . join( '/', $pathPlots, $year, $plotFile ) . "\">" . $plotFile . "</A> ";
+            foreach my $plotFile (@plotfiles) {
+                my $link = "<BR><A HREF=\"" . join( '/', $pathPlots, 'events', $year, $plotFile ) . "\">" . $plotFile . "</A> ";
+                print HFH $link;
+            }
+            foreach my $plotFile (@plotfiles1,@plotfiles2) {
+                my $link = "<BR><A HREF=\"" . join( '/', $pathPlots, 'strings', $plotFile ) . "\">" . $plotFile . "</A> ";
                 print HFH $link;
             }
             print HFH "</TD></TR>\n";

@@ -18,7 +18,7 @@ Scripts to produce information from *SeismicityDiary.xlsx*.
 *rsync* is used to synchronise all the plot files referenced by *SeismicityDiary.html* on *opsproc3* with *notWebobs*.
 ```
 # Seismicity diary
-15 * * * * cd /home/seisan/projects/SeismicityDiary; ./updateLists >/dev/null 2>&1; scp SeismicityDiary-*.txt webobs@webobs:/var/www/html/SeismicityDiary/
+15 * * * * cd /home/seisan/projects/SeismicityDiary; ./updateLists >/dev/null 2>&1; scp SeismicityDiary.html webobs@webobs:/var/www/html/; scp SeismicityDiary-*.txt webobs@webobs:/var/www/html/SeismicityDiary/
 4 * * * * rsync -a /home/seisan/projects/Seismicity/VT_strings/data/all_plots/* webobs@webobs:/var/www/html/plots/ >/dev/null 2>&1
 6 * * * * rsync -a /home/seisan/projects/SeismicityDiary/plots/* webobs@webobs:/var/www/html/plots/ >/dev/null 2>&1
 8 * * * * rsync -a --exclude 'tmp' /home/seisan/projects/Seismicity/VT_strings/data/heli_plots/* webobs@webobs:/var/www/html/plots/ >/dev/null 2>&1
