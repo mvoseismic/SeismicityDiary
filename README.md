@@ -30,7 +30,7 @@ The ID does not change when the time of the event changes.
 
 * Lists all seismic events.
 * Fields are similar to those in *Strings* sheet, except for the following:
-* 
+
 | Field | Contents |
 | ----- | ------------------------- |
 | Trig | Did the event trigger in earthworm? |
@@ -38,11 +38,11 @@ The ID does not change when the time of the event changes.
 | S-P (s) | S minus P time. |
 | FirstStation | Station with first arrival. |
 | RecordedOn | Stations that recorded a signal, sometimes in order of arrival or signal size. |
-| ROD__ | Is event in SEISAN database ROD__? |
-| FPS | Was fault-plane solution calculated? |
+| ROD__ | Is event in ROD__ SEISAN database? |
+| FPS | Was fault-plane solution obtained? |
 | TImeRef | *otime* if time of the event is the origin time instead of the first arrival time. |
 | M | Magnitude |
-| Conf | Was event like a rockfall confirmed by non-seismic data? |
+| Conf | Was event confirmed by non-seismic data? |
 
 ### WeeklyCounts
 
