@@ -186,43 +186,6 @@ foreach my $m (1 .. scalar @rowsmulti) {
 }
 
 
-# Network
-#
-@rowsmulti = Spreadsheet::Read::rows($book_data->[8]);
-foreach my $m (1 .. scalar @rowsmulti) {
-
-    my $what = $rowsmulti[$m-1][1];
-    $what = '' unless( $what );
-
-    my $id = $rowsmulti[$m-1][0];
-    $id = '' unless( $id );
-
-    #print $id, " : ", $what, "\n";
-
-    my $comment = $rowsmulti[$m-1][2];
-    $comment = '' unless( $comment );
-
-    my $idDatim = join( ' ', join( '-', substr($id,0,4), substr($id,4,2), substr($id,6,2) ), join( ':', substr($id,9,2), substr($id,11,2) ) );
-
-    #print $id, " :: ", $idDatim, " :: ", $what, "\n";
-    
-    if( substr($idDatim,0,1) eq '2' or substr($idDatim,0,1) eq '1' ) {
-        if (exists $whats{$idDatim}) {
-            printf "CAUTION: key %s already exists\n", $idDatim;
-        }
-        $ids{$idDatim} = $id;
-        $whats{$idDatim} = $what;
-        $wheres{$idDatim} = '';
-        $durations{$idDatim} = '';
-        $firsts{$idDatim} = '';
-        $comments{$idDatim} = $comment;
-        $trigs{$idDatim} = '';
-        $whatswheres{$idDatim} = $what;
-    }
-}
-
-
-
 # output
 my $outRun = 'doIt.sh';
 open(FHR, '>', $outRun) or die $!;
