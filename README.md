@@ -1,8 +1,16 @@
 # SeismicityDiary
 
+## ~/projects/SeismicityDiary
+
 *SeismicityDiary.xlsx* is a spreadsheet used to make notes on seismic events.
 
 Yellow highlighting marks entries that have not been fully checked.
+
+## Plots
+
+* Plots for events are stored in *./plots*.
+* Plots for strings are stored in *~/Projects/Seismicity/VT_strings/data*.
+* Plots for swarmettes are stored in *~/Projects/Seismicity/MSS1_swarmettes*.
 
 
 ## ID
