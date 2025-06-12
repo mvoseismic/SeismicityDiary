@@ -66,6 +66,15 @@ The ID does not change when the time of the event changes.
 
 Scripts to extract information from *SeismicityDiary.xlsx* into text files and an html file for access in *notWebobs*. The last includes links to all the plots for each event or string.
 
+
+### diary2doit.pl
+
+* Extracts information from *SeismicityDiary* files to create commands to run *getnPlot* for every event.
+* Should be used as part of a pipe, ie
+```
+$ /extractFromSpreadsheet.pl | grep Irish | diary2doit.pl > doit.sh
+```
+
 ### extractFromSpreadsheets.pl
 
 * Extracts key information from the spreadsheet *SeismicityDiary.xlsx* to text files.
