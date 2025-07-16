@@ -14,7 +14,7 @@ print '#!/usr/bin/bash', "\n";
 #my $command = '/home/seisan/bin/fetchPlot.py';
 my $command = '/home/seisan/bin/getnPlot';
 my $options0 = "";
-my $options1 = '--source auto --dir /home/seisan/tmp--DONT_USE --pre 60 --dur 180';
+my $options1 = '--source auto --dir /home/seisan/tmp--DONT_USE/seismicityDiary --pre 60 --dur 180';
 #if ( $#ARGV >= 0 ) {
 #    my $options0 = join(" ", @ARGV);
 #}
