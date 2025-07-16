@@ -70,9 +70,10 @@ Scripts to extract information from *SeismicityDiary.xlsx* into text files and a
 ### diary2doit.pl
 
 * Extracts information from *SeismicityDiary* files to create commands to run *getnPlot* for every event.
-* Should be used as part of a pipe, ie
+* Should be used as part of a pipe, eg
 ```
 $ /extractFromSpreadsheet.pl | grep Irish | ./diary2doit.pl > doit.sh
+$ cat SeismicityDiary.txt | grep -B 1 "Q experiment" | grep 20 | ./diary2doit.pl > doit.sh
 ```
 
 ### extractFromSpreadsheets.pl
