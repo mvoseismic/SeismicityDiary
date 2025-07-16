@@ -123,7 +123,7 @@ foreach my $m (1 .. scalar @rowsmulti) {
         $datimFirst = $datetime-> strftime('%Y-%m-%d %H:%M:%S.%1N');
     }
 
-    #print $id, " : ", $datimFirst, " : ", $what, "\n";
+    print $id, " : ", $datimFirst, " : ", $what, "\n";
 
     my $trig = $rowsmulti[$m-1][4];
     $trig = '' unless( $trig );

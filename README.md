@@ -75,12 +75,23 @@ Scripts to extract information from *SeismicityDiary.xlsx* into text files and a
 $ /extractFromSpreadsheet.pl | grep Irish | ./diary2doit.pl > doit.sh
 $ cat SeismicityDiary.txt | grep -B 1 "Q experiment" | grep 20 | ./diary2doit.pl > doit.sh
 ```
+* Affected by the bug in *extractFromSpreadsheets.pl*. 
+
+### csv2doit.pl
+
+* This is a temporary fix for the bug in *diary2doit.pl*. 
+* You should first save the Events sheet as a csv file.
+* Then use as part of a pipe, eg
+```
+$ cat SeismicityDiary.csv | grep "Q experiment" | ./csv2doit.pl > doIt
+```
 
 ### extractFromSpreadsheets.pl
 
 * Extracts key information from the spreadsheet *SeismicityDiary.xlsx* to text files.
 * Creates html file for *notWebobs*: http://webobs.mvo.ms:8080/SeismicityDiary.html.
 * Creates *doIt.sh* which should **never** be run in its entirity.
+* Has a bug in that it does not accurately parse the event time (see Issue #1).
 
 ### updateLists
 
