@@ -49,7 +49,7 @@ foreach my $m (1 .. scalar @rowsmulti) {
     my $id = $rowsmulti[$m-1][0];
     $id = '' unless( $id );
 
-    my $staFirst = $rowsmulti[$m-1][16];
+    my $staFirst = $rowsmulti[$m-1][17];
     $staFirst = '' unless( $staFirst );
 
     my $datimFirst = $rowsmulti[$m-1][1];
@@ -76,7 +76,7 @@ foreach my $m (1 .. scalar @rowsmulti) {
         $duration =~ s/^\s+//;
     }
 
-    my $comment = $rowsmulti[$m-1][36];
+    my $comment = $rowsmulti[$m-1][37];
     $comment = '' unless( $comment );
 
     #print $id, " :: ", $idDatim, " :: ", $what, "\n";
