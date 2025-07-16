@@ -91,7 +91,7 @@ $ cat SeismicityDiary.csv | grep "Q experiment" | ./csv2doit.pl > doIt
 * Extracts key information from the spreadsheet *SeismicityDiary.xlsx* to text files.
 * Creates html file for *notWebobs*: http://webobs.mvo.ms:8080/SeismicityDiary.html.
 * Creates *doIt.sh* which should **never** be run in its entirity.
-* Has a bug in that it does not accurately parse the event time (see Issue #1).
+* Has a bug in that it does not accurately parse the event time (see Issue #1: https://github.com/mvoseismic/SeismicityDiary/issues/2).
 
 ### updateLists
 
