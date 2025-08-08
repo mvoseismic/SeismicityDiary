@@ -17,14 +17,14 @@ Yellow highlighting marks entries that have not been fully checked.
 
 A universal ID is used in file and folder names to identify events.
 
-It uses one of these formats
+It uses one of these two formats
 ```
 yyyymmdd-hhmm
 yyyymmdd-hhmmss
 ```
-The latter is used when events are close together and IDs would not be unique.
+The latter is used when events are close together and IDs would not be unique using the shorter format.
 
-The ID does not change when the time of the event changes.
+The ID does not change when the time of the event changes, for instance the start of a string. So the ID is not necessarily related to the start time.
 
 
 ## Sheets
