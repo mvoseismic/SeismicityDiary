@@ -11,3 +11,4 @@ grep -i Explosion SeismicityDiary-brief.txt > SeismicityDiary-explosion.txt
 grep -i String SeismicityDiary-brief.txt > SeismicityDiary-string.txt
 grep VT SeismicityDiary-brief.txt > SeismicityDiary-vt.txt
 grep -i Swarmette SeismicityDiary-brief.txt > SeismicityDiary-swarmette.txt
+grep "VT swarm " SeismicityDiary-brief.txt > SeismicityDiary-swarm.txt
